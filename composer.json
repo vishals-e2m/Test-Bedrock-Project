@@ -43,7 +43,7 @@
     "wpackagist-plugin/contact-form-7": "*"
 
   },
-  "require-dev": {
+  "require-dev": { 
     "roave/security-advisories": "dev-latest",
     "laravel/pint": "^1.18"
   },
