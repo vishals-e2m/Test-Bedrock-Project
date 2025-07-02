@@ -1,5 +1,23 @@
 FROM alpine:latest
 
+RUN apk add --no-cache \
+    git \
+    php \
+    php-phar \
+    php-mbstring \
+    php-json \
+    php-openssl \
+    php-curl \
+    php-dom \
+    php-tokenizer \
+    php-xml \
+    php-session \
+    php-ctype \
+    php-iconv \
+    php-zlib \
+    curl \
+    unzip
+
 WORKDIR /var/www/html
 
 COPY . .
