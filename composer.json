@@ -40,7 +40,6 @@
     "roots/wordpress": "6.8.1",
     "roots/wp-config": "1.0.0",
     "wpackagist-theme/twentytwentyfive": "^1.0",
-    "wpackagist-plugin/contact-form-7": "*",
     "wpackagist-plugin/migrate-guru":"5.56"
 
   },
