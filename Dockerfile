@@ -2,6 +2,8 @@ FROM alpine:latest
 
 WORKDIR /var/www/html
 
+COPY . .
+
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
@@ -10,8 +12,6 @@ RUN composer update
 
 # Install dependencies
 RUN composer install
-
-COPY . .
 
 # Prevent container from exiting
 CMD ["tail", "-f", "/dev/null"]
