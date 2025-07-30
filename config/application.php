@@ -8,6 +8,7 @@
  * possible. Try to define as much of your configuration in this file as you
  * can.
  */
+///start-added by vishal 
 if (
     isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
     $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https'
@@ -15,6 +16,14 @@ if (
     $_SERVER['HTTPS'] = 'on';
 }
 
+
+// Force correct cookie behavior
+define('COOKIEPATH', '/');
+define('SITECOOKIEPATH', '/');
+define('ADMIN_COOKIE_PATH', '/wp/wp-admin');
+define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST']);
+
+//----end--vishal
 
 use Roots\WPConfig\Config;
 
