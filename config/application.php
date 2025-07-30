@@ -8,6 +8,14 @@
  * possible. Try to define as much of your configuration in this file as you
  * can.
  */
+if (
+    isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+    $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https'
+) {
+    $_SERVER['HTTPS'] = 'on';
+}
+
+
 use Roots\WPConfig\Config;
 
 use function Env\env;
